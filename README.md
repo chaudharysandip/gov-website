@@ -49,3 +49,4 @@ pnpm studio:manifests:report    # dry run
 
 The public website — its routes, its tenant chrome, its sitemap and its
 published-page pipeline — stays in `../school-website-next`.
+# website-builder
