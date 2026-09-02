@@ -1,0 +1,46 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# lockfiles from other package managers (this project uses pnpm;
+# pnpm-lock.yaml is committed)
+package-lock.json
+yarn.lock
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+*.zip
+.claude
+.kiro
+.cline
+.vscode
+
+# debug
+.pnpm-debug.log*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+.env*.local
+
+# packaged Claude skills (build artifacts — source is .claude/skills/)
+.claude/skills-dist/
+
+# Builder artefacts (page schemas, custom components, versions)
+.builder-data
+.builder-data*/

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * Every design token, theme variable and base rule the nineteen themes are
+ * built on. It lives in `@edn/site-themes` because the website app renders the
+ * same themes from the same stylesheet — two copies would drift the day someone
+ * adjusted a colour in one of them.
+ *
+ * Reached by relative path rather than by package name on purpose. Tailwind
+ * resolves CSS `@import` with its own resolver, which does not follow this
+ * package's wildcard `exports` to a stylesheet; and `@source` below has to be
+ * written relatively in any case, because a path that goes through the
+ * node_modules symlink is one Tailwind skips when scanning for classes. One
+ * spelling for both is less to get wrong than two.
+ */
+@import "../../../site-themes/src/styles/theme.css";
+
+/*
+ * Tailwind scans upward from this file and skips node_modules, so neither the
+ * studio's own source nor the package's would be found on its own. Both are
+ * named explicitly.
+ */
+@source "../";
+@source "../../../site-themes/src";
